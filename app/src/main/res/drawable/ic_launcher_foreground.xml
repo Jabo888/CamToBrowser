@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:translateX="-7">
+    <!-- Kamera-Gehäuse -->
+    <path
+        android:fillColor="#5AA9FF"
+        android:pathData="M36,42 h36 a6,6 0 0 1 6,6 v16 a6,6 0 0 1 -6,6 h-36 a6,6 0 0 1 -6,-6 v-16 a6,6 0 0 1 6,-6 z" />
+    <!-- Sucher -->
+    <path
+        android:fillColor="#5AA9FF"
+        android:pathData="M44,42 l3,-6 h14 l3,6 z" />
+    <!-- Objektiv -->
+    <path
+        android:fillColor="#0A0D14"
+        android:pathData="M54,56 m-9,0 a9,9 0 1 0 18,0 a9,9 0 1 0 -18,0" />
+    <path
+        android:fillColor="#5AA9FF"
+        android:pathData="M54,56 m-5,0 a5,5 0 1 0 10,0 a5,5 0 1 0 -10,0" />
+    <!-- Funkwellen (Stream) -->
+    <path
+        android:strokeColor="#5AA9FF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M82,44 a14,14 0 0 1 0,24" />
+    <path
+        android:strokeColor="#5AA9FF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M87,38 a22,22 0 0 1 0,36" />
+    </group>
+</vector>

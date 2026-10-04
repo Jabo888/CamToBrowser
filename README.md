@@ -1,5 +1,4 @@
 # CamToBrowser
-Hardware-encoded H.264 stream from a mobile phone via WebSocket, played back on a small player page (WebCodecs) – with very low latency.
 
 **Use your Android phone as a low-latency wireless camera for your PC – no plugin, no driver.**
 Video and audio are streamed over your local network and played in a tiny web page that any
@@ -73,7 +72,6 @@ Release: `Build ▸ Generate Signed App Bundle / APK ▸ Android App Bundle`.
 - Not tested on all devices; behaviour of manual controls depends on the phone's Camera2 support.
 - No virtual webcam driver for other programs; use your streaming software's virtual camera if needed.
 
-
 ---
 
 ## Deutsch
@@ -109,5 +107,3 @@ Per USB: `adb forward tcp:8080 tcp:8080` und `localhost` statt der Handy-IP verw
 - Die Übertragung ist **unverschlüsselt** (HTTP/WS). Die PIN verhindert nur zufälligen Zugriff.
   Nur in vertrauenswürdigen Netzwerken nutzen, nie in öffentlichem WLAN.
 - Die heruntergeladene Player-Datei enthält die PIN – nicht weitergeben. Nach einer neuen PIN die Datei neu laden.
-
-
