@@ -111,7 +111,12 @@ class CameraStreamer(ctx: Context, private val server: StreamServer) {
 
             val rec = map.getOutputSizes(MediaRecorder::class.java)?.toList() ?: emptyList()
             val all = rec.filter { it.width in 640..3840 && it.height <= 2160 }
-            sizes = (all.filter { is169(it) }.ifEmpty { all }).sortedByDescending { it.width * it.height }
+            // Nur gaengige 16:9-Standardgroessen anbieten (keine Dubletten wie 1920x1088).
+            val std = listOf(3840 to 2160, 2560 to 1440, 1920 to 1080, 1280 to 720, 960 to 540, 854 to 480, 640 to 360)
+            val clean = std.mapNotNull { (w, h) -> all.firstOrNull { it.width == w && it.height == h } }
+            val base = if (clean.isNotEmpty()) clean
+                else (all.filter { is169(it) }.ifEmpty { all }).distinctBy { it.width }
+            sizes = base.sortedByDescending { it.width * it.height }
             if (sizes.none { it.width == width && it.height == height }) {
                 val s = sizes.minByOrNull { abs(it.width - 1920) } ?: Size(1280, 720)
                 width = s.width; height = s.height
